@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>view post</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+<div th:replace="~{admin/navbar :: navbar}"></div>
+<div class="container">
+  <div class="row">
+      <div class="col-md 8 offset-md-2">
+         <h2 th:text="${post.title}"></h2>
+         <hr/>
+         <h4 th:text="${post.shortDescription}"></h4>
+         <hr/>
+         <div th:utext="${post.content}">
+      </div>
+  </div>
+  
+</div>
+</div>
+<div th:replace="~{admin/footer :: footer}"></div>
+</body>
+</html>
